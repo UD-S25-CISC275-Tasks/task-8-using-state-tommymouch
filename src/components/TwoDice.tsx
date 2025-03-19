@@ -31,8 +31,20 @@ export function TwoDice(): React.JSX.Element {
             {/* If dice match (and are not snake eyes), the user wins */}
             {isDoubles && !isSnakeEyes && <div>You win the game</div>}
 
-            <Button onClick={rollLeft}>Roll Left</Button>
-            <Button onClick={rollRight}>Roll Right</Button>
+            <Button
+                onClick={() => {
+                    rollLeft();
+                }}
+            >
+                Roll Left
+            </Button>
+            <Button
+                onClick={() => {
+                    rollRight();
+                }}
+            >
+                Roll Right
+            </Button>
         </div>
     );
 }
